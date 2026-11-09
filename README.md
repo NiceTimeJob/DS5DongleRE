@@ -2,6 +2,23 @@
 
 基于 **Bouffalo Lab BL616 / BL618** 的 DualSense 无线接收器开源固件。它通过蓝牙连接 DualSense 或 DualSense Edge 手柄，并在电脑上枚举为 USB DualSense，同时提供按键映射、宏、体感、音频和诊断等功能。
 
+本项目以 **[sqlCRT/ds5dongle-bl618-opensource](https://github.com/sqlCRT/ds5dongle-bl618-opensource)** 为直接基座源码进行二次开发。
+
+## 🌐 在线配置与固件刷写
+
+### **[👉 打开 DongleRE 在线工具](https://donglere.megu17.xyz/)**
+
+**无需安装配置软件**，使用桌面版 Chrome、Edge 或 Brave 打开网站并连接接收器，即可：
+
+- **直接刷写固件**：通过 WebSerial 完成 BL616 固件更新；
+- **配置手柄参数**：按键映射、覆盖层、连发、触摸板、体感与扳机等；
+- **校准与测试**：陀螺仪校准、输入输出测试及实时状态查看；
+- **管理设备宏**：录制、编辑、保存和回放设备端宏。
+
+[![DongleRE 在线按键映射与参数配置](docs/images/webgui-mapping.png)](https://donglere.megu17.xyz/)
+
+[![DongleRE 在线校准页面](docs/images/webgui-calibration.png)](https://donglere.megu17.xyz/)
+
 ## 主要功能
 
 - **蓝牙转 USB**：接收手柄蓝牙输入，向电脑输出标准 DualSense USB 报告。
@@ -58,7 +75,7 @@ build_windows.bat flash COMx
 ## 说明
 
 - 当前固件版本见 `firmware/src/version.h`。
-- Web 配置页面不包含在本次源码目录中。
+- 在线配置与刷写工具由 **[donglere.megu17.xyz](https://donglere.megu17.xyz/)** 提供；其网页源码不包含在本次固件源码目录中。
 - `tools/` 中的脚本主要用于开发和诊断，使用前请先阅读脚本说明及参数。
 
 ## 开源项目与致谢
@@ -67,7 +84,8 @@ build_windows.bat flash COMx
 
 | 项目 | 用途或参考关系 | 许可证 |
 | --- | --- | --- |
-| [awalol/DS5Dongle](https://github.com/awalol/DS5Dongle) | 上游基础工程，部分实现由其移植或改编 | MIT |
+| [sqlCRT/ds5dongle-bl618-opensource](https://github.com/sqlCRT/ds5dongle-bl618-opensource) | **本项目的直接基座源码**，在此之上进行二次开发 | GPL-3.0 |
+| [awalol/DS5Dongle](https://github.com/awalol/DS5Dongle) | 上游原始工程，相关实现经基座项目继承或改编 | MIT |
 | [xiph/opus](https://github.com/xiph/opus) | Opus 音频编解码 | BSD-3-Clause |
 | [CherryUSB](https://github.com/cherry-embedded/CherryUSB) | USB 设备协议栈，由外部 SDK 提供 | Apache-2.0 |
 | [bouffalolab/bouffalo_sdk](https://github.com/bouffalolab/bouffalo_sdk) | BL616／BL618 构建与运行依赖 | Apache-2.0 |

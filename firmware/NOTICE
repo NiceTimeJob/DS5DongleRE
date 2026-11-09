@@ -4,10 +4,16 @@ DS5Dongle BL618 — Third-Party Notices
 This project is licensed under GPL-3.0 (see LICENSE). It incorporates or is
 derived from the following third-party works:
 
-1. awalol/DS5Dongle (MIT License)
-   Portions of this project are ported/adapted from
-   https://github.com/awalol/DS5Dongle . The upstream work is licensed under
-   the MIT License. The upstream copyright notice and license text:
+1. sqlCRT/ds5dongle-bl618-opensource (GPL-3.0)
+   Direct base source tree for this project's secondary development.
+   https://github.com/sqlCRT/ds5dongle-bl618-opensource
+   See the upstream repository for its original copyright and license notices.
+
+2. awalol/DS5Dongle (MIT License)
+   Upstream original work inherited or referenced through the direct base
+   project. Portions of the implementation are ported/adapted from
+   https://github.com/awalol/DS5Dongle . The upstream copyright notice and
+   license text:
 
    Copyright (c) 2026 awalol
 
@@ -29,33 +35,33 @@ derived from the following third-party works:
    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
    SOFTWARE.
 
-2. xiph/opus (BSD-3-Clause)
+3. xiph/opus (BSD-3-Clause)
    lib/opus is the Opus audio codec from https://github.com/xiph/opus ,
    licensed under the BSD-3-Clause License. See lib/opus/LICENSE_PLEASE_READ.txt
    for the full license text.
 
-3. CherryUSB (Apache-2.0)
+4. CherryUSB (Apache-2.0)
    External build dependency: https://github.com/cherry-embedded/CherryUSB
 
-4. bouffalolab/bouffalo_sdk (Apache-2.0)
+5. bouffalolab/bouffalo_sdk (Apache-2.0)
    External build dependency: https://github.com/bouffalolab/bouffalo_sdk
 
-5. Linux kernel hid-playstation.c (GPL-2.0)
+6. Linux kernel hid-playstation.c (GPL-2.0)
    Used as a protocol/offset reference only. No kernel code is incorporated
    into this project.
 
-6. FreeRTOS (MIT License)
+7. FreeRTOS (MIT License)
    Real-time kernel and configuration reference. The SDK supplies the kernel;
    src/FreeRTOSConfig.h retains its upstream copyright and permission notice.
    https://github.com/FreeRTOS/FreeRTOS-Kernel
 
-7. Cockos WDL (WDL License, zlib-style)
+8. Cockos WDL (WDL License, zlib-style)
    The 16:15 polyphase sinc resampler in audio.c matches the behavior of the
    upstream WDL-based resampler and uses it as an algorithm/reference point.
    No WDL source files are bundled in this repository.
    https://github.com/justinfrankel/WDL
 
-8. JibbSmart/GamepadMotionHelpers (MIT License)
+9. JibbSmart/GamepadMotionHelpers (MIT License)
    Historical reference for the former automatic gyro calibration code.
    That implementation was removed in R1.3; this entry is retained for
    development-history attribution only.
