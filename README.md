@@ -61,6 +61,23 @@ build_windows.bat flash COMx
 - Web 配置页面不包含在本次源码目录中。
 - `tools/` 中的脚本主要用于开发和诊断，使用前请先阅读脚本说明及参数。
 
+## 开源项目与致谢
+
+本项目在开发过程中参考、移植或使用了以下开源项目。感谢各项目作者及贡献者：
+
+| 项目 | 用途或参考关系 | 许可证 |
+| --- | --- | --- |
+| [awalol/DS5Dongle](https://github.com/awalol/DS5Dongle) | 上游基础工程，部分实现由其移植或改编 | MIT |
+| [xiph/opus](https://github.com/xiph/opus) | Opus 音频编解码 | BSD-3-Clause |
+| [CherryUSB](https://github.com/cherry-embedded/CherryUSB) | USB 设备协议栈，由外部 SDK 提供 | Apache-2.0 |
+| [bouffalolab/bouffalo_sdk](https://github.com/bouffalolab/bouffalo_sdk) | BL616／BL618 构建与运行依赖 | Apache-2.0 |
+| [Linux hid-playstation](https://github.com/torvalds/linux/blob/master/drivers/hid/hid-playstation.c) | DualSense 协议、报文偏移及传感器刻度参考；未并入内核源码 | GPL-2.0 |
+| [FreeRTOS](https://github.com/FreeRTOS/FreeRTOS-Kernel) | 实时操作系统及配置参考 | MIT |
+| [Cockos WDL](https://github.com/justinfrankel/WDL) | 音频 sinc 重采样实现的行为与算法参考；未捆绑 WDL 源文件 | WDL License（zlib 类） |
+| [JibbSmart/GamepadMotionHelpers](https://github.com/JibbSmart/GamepadMotionHelpers) | 早期陀螺仪自动校准参考；相关代码已于 R1.3 移除 | MIT |
+
+更完整的第三方说明见 [NOTICE](firmware/NOTICE)。各组件的许可证归各自项目所有，使用时请同时遵守对应条款。
+
 ## 许可证
 
-本项目采用 **GPL-3.0**，详见 [LICENSE](firmware/LICENSE)。第三方组件及其许可证见 [NOTICE](firmware/NOTICE)。
+本项目自身源码采用 **GPL-3.0** 开源，详见 [LICENSE](firmware/LICENSE)。

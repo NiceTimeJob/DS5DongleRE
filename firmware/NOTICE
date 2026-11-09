@@ -44,4 +44,21 @@ derived from the following third-party works:
    Used as a protocol/offset reference only. No kernel code is incorporated
    into this project.
 
+6. FreeRTOS (MIT License)
+   Real-time kernel and configuration reference. The SDK supplies the kernel;
+   src/FreeRTOSConfig.h retains its upstream copyright and permission notice.
+   https://github.com/FreeRTOS/FreeRTOS-Kernel
+
+7. Cockos WDL (WDL License, zlib-style)
+   The 16:15 polyphase sinc resampler in audio.c matches the behavior of the
+   upstream WDL-based resampler and uses it as an algorithm/reference point.
+   No WDL source files are bundled in this repository.
+   https://github.com/justinfrankel/WDL
+
+8. JibbSmart/GamepadMotionHelpers (MIT License)
+   Historical reference for the former automatic gyro calibration code.
+   That implementation was removed in R1.3; this entry is retained for
+   development-history attribution only.
+   https://github.com/JibbSmart/GamepadMotionHelpers
+
 All other code is original to this project and licensed under GPL-3.0.
